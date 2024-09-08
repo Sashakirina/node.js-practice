@@ -3,8 +3,11 @@ export const getAllProducts = async () => {
   return await ProductModel.find();
 };
 
-
 export const getProductById = async (productId) => {
   const product = await ProductModel.findById(productId);
   return product;
-}
+};
+
+export const createProduct = async (payload) => {
+  return await ProductModel.create(payload);
+};
