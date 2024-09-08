@@ -4,6 +4,7 @@ import {
   getProductByIdController,
   createProductController,
   udateProductController,
+  deleteProductController,
 } from '../controllers/products.js';
 import { ctrlWrapper } from '../utils/ctrlWrapper.js';
 
@@ -15,5 +16,7 @@ router.get('/products/:productId', ctrlWrapper(getProductByIdController));
 router.post('/products', ctrlWrapper(createProductController));
 
 router.patch('/products/:productId', ctrlWrapper(udateProductController));
+
+router.delete('/products/:productId', ctrlWrapper(deleteProductController));
 
 export default router;
