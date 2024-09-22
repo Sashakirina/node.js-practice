@@ -17,7 +17,9 @@ const ProductShema = new Schema(
       required: true,
     },
     description: { type: String },
+    userId: { type: Schema.Types.ObjectId, ref: 'users', require: true },
   },
+
   { timestamps: true, versionKey: false },
 );
 
