@@ -6,8 +6,14 @@ import {
   updateProduct,
   deleteProduct,
 } from '../services/products.js';
-export const getAllProductController = async (reg, res) => {
-  const data = await getAllProducts();
+
+import { parseFilterParams } from '../utils/parseFilterParams.js';
+
+export const getAllProductController = async (req, res) => {
+  console.log(req.query);
+  const filter = parseFilterParams(req.query);
+
+  const data = await getAllProducts(filter);
   res.json({
     status: 200,
     message: 'Successfully found products!',
