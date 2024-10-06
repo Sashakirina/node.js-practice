@@ -1,12 +1,12 @@
 openapi: 3.1.0
 info:
   version: 1.0.0
-  title: <назва вашого додатку>
+  title: Products API
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   description: >
-    <опис вашого додатку>
+    Products API project
 tags:
   - name: products
     description: Operation about products
